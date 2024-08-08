@@ -1,4 +1,4 @@
-# Day 09 - Piscine SQL
+# Day 09 — SQL Bootcamp
 
 ## _RDBMS is not just a tables_
 
@@ -15,23 +15,23 @@ Resume: Today you will see how to create and use functional blocks in Databases.
 3. [Chapter III](#chapter-iii) \
     3.1. [Rules of the day](#rules-of-the-day)  
 4. [Chapter IV](#chapter-iv) \
-    4.1. [Exercise 00 - Audit of incoming inserts](#exercise-00-audit-of-incoming-inserts)  
+    4.1. [Exercise 00 — Audit of incoming inserts](#exercise-00-audit-of-incoming-inserts)  
 5. [Chapter V](#chapter-v) \
-    5.1. [Exercise 01 - Audit of incoming updates](#exercise-01-audit-of-incoming-updates)  
+    5.1. [Exercise 01 — Audit of incoming updates](#exercise-01-audit-of-incoming-updates)  
 6. [Chapter VI](#chapter-vi) \
-    6.1. [Exercise 02 - Audit of incoming deletes](#exercise-02-audit-of-incoming-deletes)  
+    6.1. [Exercise 02 — Audit of incoming deletes](#exercise-02-audit-of-incoming-deletes)  
 7. [Chapter VII](#chapter-vii) \
-    7.1. [Exercise 03 - Generic Audit](#exercise-03-generic-audit)  
+    7.1. [Exercise 03 — Generic Audit](#exercise-03-generic-audit)  
 8. [Chapter VIII](#chapter-viii) \
-    8.1. [Exercise 04 - Database View VS Database Function](#exercise-04-database-view-vs-database-function)
+    8.1. [Exercise 04 — Database View VS Database Function](#exercise-04-database-view-vs-database-function)
 9. [Chapter IX](#chapter-ix) \
-    9.1. [Exercise 05 - Parameterized Database Function](#exercise-05-parameterized-database-function)
+    9.1. [Exercise 05 — Parameterized Database Function](#exercise-05-parameterized-database-function)
 10. [Chapter X](#chapter-x) \
-    10.1. [Exercise 06 - Function like a function-wrapper](#exercise-06-function-like-a-function-wrapper)
+    10.1. [Exercise 06 — Function like a function-wrapper](#exercise-06-function-like-a-function-wrapper)
 11. [Chapter XI](#chapter-xi) \
-    11.1. [Exercise 07 - Different view to find a Minimum](#exercise-07-different-view-to-find-a-minimum)
+    11.1. [Exercise 07 — Different view to find a Minimum](#exercise-07-different-view-to-find-a-minimum)
 12. [Chapter XII](#chapter-xii) \
-    12.1. [Exercise 08 - Fibonacci algorithm is in a function](#exercise-08-fibonacci-algorithm-is-in-a-function)    
+    12.1. [Exercise 08 — Fibonacci algorithm is in a function](#exercise-08-fibonacci-algorithm-is-in-a-function)    
       
 
 ## Chapter I
@@ -87,36 +87,36 @@ Absolutely anything can be represented in SQL! Let's get started and have fun!
 
 
 1. **pizzeria** table (Dictionary Table with available pizzerias)
-- field id - primary key
-- field name - name of pizzeria
-- field rating - average rating of pizzeria (from 0 to 5 points)
+- field id — primary key
+- field name — name of pizzeria
+- field rating — average rating of pizzeria (from 0 to 5 points)
 2. **person** table (Dictionary Table with persons who loves pizza)
-- field id - primary key
-- field name - name of person
-- field age - age of person
-- field gender - gender of person
-- field address - address of person
+- field id — primary key
+- field name — name of person
+- field age — age of person
+- field gender — gender of person
+- field address — address of person
 3. **menu** table (Dictionary Table with available menu and price for concrete pizza)
-- field id - primary key
-- field pizzeria_id - foreign key to pizzeria
-- field pizza_name - name of pizza in pizzeria
-- field price - price of concrete pizza
+- field id — primary key
+- field pizzeria_id — foreign key to pizzeria
+- field pizza_name — name of pizza in pizzeria
+- field price — price of concrete pizza
 4. **person_visits** table (Operational Table with information about visits of pizzeria)
-- field id - primary key
-- field person_id - foreign key to person
-- field pizzeria_id - foreign key to pizzeria
-- field visit_date - date (for example 2022-01-01) of person visit 
+- field id — primary key
+- field person_id — foreign key to person
+- field pizzeria_id — foreign key to pizzeria
+- field visit_date — date (for example 2022-01-01) of person visit 
 5. **person_order** table (Operational Table with information about persons orders)
-- field id - primary key
-- field person_id - foreign key to person
-- field menu_id - foreign key to menu
-- field order_date - date (for example 2022-01-01) of person order 
+- field id — primary key
+- field person_id — foreign key to person
+- field menu_id — foreign key to menu
+- field order_date — date (for example 2022-01-01) of person order 
 
 People's visit and people's order are different entities and don't contain any correlation between data. For example, a customer can be in a restaurant (just looking at the menu) and in that time place an order in another restaurant by phone or mobile application. Or another case, just be at home and again make a call with order without any visits.
 
 
 ## Chapter IV
-## Exercise 00 - Audit of incoming inserts
+## Exercise 00 — Audit of incoming inserts
 
 | Exercise 00: Audit of incoming inserts |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -152,7 +152,7 @@ When you are done with the trigger objects, please issue an `INSERT` statement i
 
 
 ## Chapter V
-## Exercise 01 - Audit of incoming updates
+## Exercise 01 — Audit of incoming updates
 
 | Exercise 01: Audit of incoming updates|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -170,7 +170,7 @@ When you are ready, apply the UPDATE statements below.
 
 
 ## Chapter VI
-## Exercise 02 - Audit of incoming deletes
+## Exercise 02 — Audit of incoming deletes
 
 | Exercise 02: Audit of incoming deletes|                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -186,7 +186,7 @@ When you are ready, use the SQL statement below.
 `DELETE FROM person WHERE id = 10;`
 
 ## Chapter VII
-## Exercise 03 - Generic Audit
+## Exercise 03 — Generic Audit
 
 | Exercise 03: Generic Audit |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -212,7 +212,7 @@ When you are ready, reapply the set of DML statements.
 
 
 ## Chapter VIII
-## Exercise 04 - Database View VS Database Function
+## Exercise 04 — Database View VS Database Function
 
 
 | Exercise 04: Database View VS Database Function |                                                                                                                          |
@@ -237,7 +237,7 @@ To check yourself and call a function, you can make a statement like this (Amazi
 
 
 ## Chapter IX
-## Exercise 05 - Parameterized Database Function
+## Exercise 05 — Parameterized Database Function
 
 
 | Exercise 05: Parameterized Database Function|                                                                                                                          |
@@ -260,7 +260,7 @@ To check yourself and call a function, you can make a statement like this (Wow! 
 
 
 ## Chapter X
-## Exercise 06 - Function like a function-wrapper
+## Exercise 06 — Function like a function-wrapper
 
 
 | Exercise 06: Function like a function-wrapper|                                                                                                                          |
@@ -284,7 +284,7 @@ To check yourself and call a function, you can make a statement like the one bel
 
 
 ## Chapter XI
-## Exercise 07 - Different view to find a Minimum
+## Exercise 07 — Different view to find a Minimum
 
 
 | Exercise 07: Different view to find a Minimum|                                                                                                                          |
@@ -302,7 +302,7 @@ To check yourself and call a function, you can make a statement like the one bel
 
 
 ## Chapter XII
-## Exercise 08 - Fibonacci algorithm is in a function
+## Exercise 08 — Fibonacci algorithm is in a function
 
 
 | Exercise 08: Fibonacci algorithm is in a function|                                                                                                                          |
