@@ -1,0 +1,39 @@
+create table person_audit (like person);
+
+alter table person_audit
+drop column id;
+
+alter table person_audit
+add column created timestamp with time zone not null default now()
+, add column type_event char(1) not null default 'I'
+, add column row_id bigint not null;
+
+alter table person_audit
+add constraint ch_type_event check (type_event in ('I', 'U', 'D'));
+
+create function fnc_trg_person_insert_audit()
+returns trigger as
+$$
+begin
+insert into person_audit(row_id,
+        name,
+        age,
+        gender,
+        address)
+values (NEW.id,
+        NEW.name,
+        NEW.age,
+        NEW.gender,
+        NEW.address);
+return new;
+end;
+$$ language plpgsql;
+
+create trigger trg_person_insert_audit
+after insert on person
+for each row
+execute function fnc_trg_person_insert_audit();
+
+insert into person (id, name, age, gender, address) values (
+    10, 'Damir', 22, 'male', 'Irkutsk'
+);
