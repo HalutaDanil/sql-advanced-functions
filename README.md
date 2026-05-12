@@ -31,21 +31,6 @@ Advanced PL/pgSQL programming: complex functions, dynamic SQL, error handling, a
 | ex07 | RETURN QUERY |
 | ex08 | Recursive functions |
 
-### 🚀 Quick Start
-
-```sql
--- Dynamic SQL
-CREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)
-RETURNS INTEGER AS $$
-DECLARE
-    result INTEGER;
-BEGIN
-    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)
-    INTO result;
-    RETURN result;
-END;
-$$ LANGUAGE plpgsql;
-```
 
 ---
 
@@ -76,21 +61,6 @@ $$ LANGUAGE plpgsql;
 | ex07 | RETURN QUERY |
 | ex08 | Рекурсивные функции |
 
-### 🚀 Быстрый старт
-
-```sql
--- Динамический SQL
-CREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)
-RETURNS INTEGER AS $$
-DECLARE
-    result INTEGER;
-BEGIN
-    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)
-    INTO result;
-    RETURN result;
-END;
-$$ LANGUAGE plpgsql;
-```
 
 ---
 
