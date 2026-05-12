@@ -19,11 +19,33 @@ Advanced PL/pgSQL programming: complex functions, dynamic SQL, error handling, a
 
 ### ✨ Features
 
-| Exercise | Topic |\n|----------|-------|\n| ex00 | Functions with OUT parameters |\n| ex01 | Functions with VARIADIC |\n| ex02 | Polymorphic functions |\n| ex03 | Dynamic SQL (EXECUTE) |\n| ex04 | Exception handling |\n| ex05 | Arrays in PL/pgSQL |\n| ex06 | Working with JSON |\n| ex07 | RETURN QUERY |\n| ex08 | Recursive functions |
+| Exercise | Topic |
+|----------|-------|
+| ex00 | Functions with OUT parameters |
+| ex01 | Functions with VARIADIC |
+| ex02 | Polymorphic functions |
+| ex03 | Dynamic SQL (EXECUTE) |
+| ex04 | Exception handling |
+| ex05 | Arrays in PL/pgSQL |
+| ex06 | Working with JSON |
+| ex07 | RETURN QUERY |
+| ex08 | Recursive functions |
 
 ### 🚀 Quick Start
 
-```sql\n-- Dynamic SQL\nCREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)\nRETURNS INTEGER AS $$\nDECLARE\n    result INTEGER;\nBEGIN\n    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)\n    INTO result;\n    RETURN result;\nEND;\n$$ LANGUAGE plpgsql;\n```
+```sql
+-- Dynamic SQL
+CREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)
+RETURNS INTEGER AS $$
+DECLARE
+    result INTEGER;
+BEGIN
+    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)
+    INTO result;
+    RETURN result;
+END;
+$$ LANGUAGE plpgsql;
+```
 
 ---
 
@@ -42,11 +64,33 @@ Advanced PL/pgSQL programming: complex functions, dynamic SQL, error handling, a
 
 ### ✨ Возможности
 
-| Задача | Тема |\n|--------|------|\n| ex00 | Функции с OUT параметрами |\n| ex01 | Функции с VARIADIC |\n| ex02 | Полиморфные функции |\n| ex03 | Динамический SQL (EXECUTE) |\n| ex04 | Обработка исключений |\n| ex05 | Массивы в PL/pgSQL |\n| ex06 | Работа с JSON |\n| ex07 | RETURN QUERY |\n| ex08 | Рекурсивные функции |
+| Задача | Тема |
+|--------|------|
+| ex00 | Функции с OUT параметрами |
+| ex01 | Функции с VARIADIC |
+| ex02 | Полиморфные функции |
+| ex03 | Динамический SQL (EXECUTE) |
+| ex04 | Обработка исключений |
+| ex05 | Массивы в PL/pgSQL |
+| ex06 | Работа с JSON |
+| ex07 | RETURN QUERY |
+| ex08 | Рекурсивные функции |
 
 ### 🚀 Быстрый старт
 
-```sql\n-- Динамический SQL\nCREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)\nRETURNS INTEGER AS $$\nDECLARE\n    result INTEGER;\nBEGIN\n    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)\n    INTO result;\n    RETURN result;\nEND;\n$$ LANGUAGE plpgsql;\n```
+```sql
+-- Динамический SQL
+CREATE OR REPLACE FUNCTION get_table_count(t_name TEXT)
+RETURNS INTEGER AS $$
+DECLARE
+    result INTEGER;
+BEGIN
+    EXECUTE format('SELECT COUNT(*) FROM %I', t_name)
+    INTO result;
+    RETURN result;
+END;
+$$ LANGUAGE plpgsql;
+```
 
 ---
 
